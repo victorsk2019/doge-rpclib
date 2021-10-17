@@ -1,18 +1,18 @@
-
 package com.rpclib.util;
 
 /**
  *
  * @author Victor Skovorodnikov
  */
-public class ConProperties 
+
+public class RPCProperties 
 {
     private String rpcuser_ = "";
     private String rpcpassword_ = "";
     private int rpcport_ = 0;
     private String rpcip_ = "";
     
-    ConProperties(String rpcuser, String rpcpassword, int rpcport, String rpcip)
+    RPCProperties(String rpcuser, String rpcpassword, int rpcport, String rpcip)
     {
         rpcuser_ = rpcuser;
         rpcpassword_ = rpcpassword;
