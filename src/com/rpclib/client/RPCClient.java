@@ -13,14 +13,13 @@ public class RPCClient
     
     public RPCClient(RPCProperties props)
     {
-        props_ = props;
-    
+        this.props_ = props;    
     }
     
-    public String getInfo()
+    public String getRPCResponse(String method)
     {
         RPCConnect conn = new RPCConnect();
-        String response = conn.getResponse(props_, "getinfo");
+        String response = conn.getResponse(this.props_, method);
         return response;
     }
     
