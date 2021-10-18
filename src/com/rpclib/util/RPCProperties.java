@@ -12,7 +12,7 @@ public class RPCProperties
     private int rpcport_ = 0;
     private String rpcip_ = "";
     
-    RPCProperties(String rpcuser, String rpcpassword, int rpcport, String rpcip)
+    public RPCProperties(String rpcuser, String rpcpassword, int rpcport, String rpcip)
     {
         rpcuser_ = rpcuser;
         rpcpassword_ = rpcpassword;

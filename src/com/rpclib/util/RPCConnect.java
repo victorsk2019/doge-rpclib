@@ -6,5 +6,13 @@ package com.rpclib.util;
  */
 public class RPCConnect 
 {
+    public RPCConnect()
+    {}
+    
+    public String getResponse(RPCProperties props, String method)
+    {
+        String response = "";
+        return response;
+    }
     
 }
