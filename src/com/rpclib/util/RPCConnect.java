@@ -2,10 +2,10 @@ package com.rpclib.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Base64;
 import java.util.List;
@@ -44,8 +44,7 @@ public class RPCConnect
             
             OutputStream os = conn.getOutputStream();
             os.write(RQ.getBytes("UTF-8"), 0 , RQ.length());
-            
-            
+                        
             try
             {
                 Map <String, List<String>> map = conn.getHeaderFields();
@@ -88,6 +87,6 @@ public class RPCConnect
     
     private String getJSONContent(String method)
     {
-        return "{\"jsonrpc\":\"1.0\", \"id\":\"curltest\", \"method\": \"" + method + "\", \"params\": [] }";
+        return "{\"jsonrpc\":\"1.0\", \"id\":\"dogerpc\", \"method\": \"" + method + "\", \"params\": [] }";
     }
 }
