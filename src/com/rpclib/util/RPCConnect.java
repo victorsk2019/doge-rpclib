@@ -31,13 +31,14 @@ public class RPCConnect
         
         try
         {
-            URL cURL = new URL("http://" + props.getRPCIP() + ":" + props.getRPCPort());
+            URL cURL = new URL("http", props.getRPCIP(), props.getRPCPort(), "");
             String RQ = getJSONContent(method);
             HttpURLConnection conn = (HttpURLConnection)cURL.openConnection();
             
             String authParams = props.getRPCUser() + ":" + props.getRPCPassword();
             conn.setRequestProperty("Authorization", "Basic " + new String(Base64.getEncoder().encode(authParams.getBytes())));
             conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            conn.setRequestProperty("Accept", "application/json");
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);
