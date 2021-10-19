@@ -4,14 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Base64;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  *
@@ -24,7 +22,6 @@ public class RPCConnect
     
     public String getResponse(RPCProperties props, String method)
     {
-        System.out.println("Trying to get some response");
         return processRequest(props, method);
     }
     
@@ -74,9 +71,6 @@ public class RPCConnect
             os.flush();
             os.close();
             conn.disconnect();
-            
-            
-            
         }
         
         catch (MalformedURLException me)
