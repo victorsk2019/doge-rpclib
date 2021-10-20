@@ -45,24 +45,12 @@ public class RPCConnect
             
             OutputStream os = conn.getOutputStream();
             os.write(RQ.getBytes("UTF-8"), 0 , RQ.length());
-                        
-            try
-            {
-                Map <String, List<String>> map = conn.getHeaderFields();
-                map.forEach((k, v) -> System.out.println(k + " " + v));           
-            }
             
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-           
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String inputLine;
             
             while ((inputLine = in.readLine()) != null) 
             {
-                System.out.println("---> " + inputLine);
                 RPCResponse += inputLine;
             }
             
