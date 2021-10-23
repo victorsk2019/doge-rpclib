@@ -16,10 +16,10 @@ public class RPCClient
         this.props_ = props;    
     }
     
-    public String getRPCResponse(String method)
+    public String getRPCResponse(String method, String param)
     {
         RPCConnect conn = new RPCConnect();
-        String response = conn.getResponse(this.props_, method);
+        String response = conn.getResponse(this.props_, method, param);
         return response;
     }
     

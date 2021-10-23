@@ -20,19 +20,19 @@ public class RPCConnect
     public RPCConnect()
     {}
     
-    public String getResponse(RPCProperties props, String method)
+    public String getResponse(RPCProperties props, String method, String param)
     {
-        return processRequest(props, method);
+        return processRequest(props, method, param);
     }
     
-    private String processRequest(RPCProperties props, String method)
+    private String processRequest(RPCProperties props, String method, String param)
     {
         String RPCResponse = "";
         
         try
         {
             URL cURL = new URL("http", props.getRPCIP(), props.getRPCPort(), "");
-            String RQ = getJSONContent(method);
+            String RQ = getJSONContent(method, param);
             HttpURLConnection conn = (HttpURLConnection)cURL.openConnection();
             
             String authParams = props.getRPCUser() + ":" + props.getRPCPassword();
@@ -74,8 +74,8 @@ public class RPCConnect
         return RPCResponse;
     }
     
-    private String getJSONContent(String method)
+    private String getJSONContent(String method, String param)
     {
-        return "{\"jsonrpc\":\"1.0\", \"id\":\"dogerpc\", \"method\": \"" + method + "\", \"params\": [] }";
+        return "{\"jsonrpc\":\"1.0\", \"id\":\"dogerpc\", \"method\": \"" + method + "\", \"params\": [" + param + "]}";
     }
 }
