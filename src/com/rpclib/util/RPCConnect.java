@@ -58,7 +58,6 @@ public class RPCConnect
             
             os.flush();
             os.close();
-            conn.disconnect();
         }
         
         catch (MalformedURLException me)
