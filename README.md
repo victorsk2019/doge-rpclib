@@ -15,9 +15,9 @@ There are 3 java files:
      |    
      -----util
            |
-	   RPCConnect.java	
+           RPCConnect.java	
            |
-	   RPCProperties.java
+           RPCProperties.java
 ```
 
 RPCClient.java: This is a client-facing class whose instance is used to send and receive JSON-RPC responses.
