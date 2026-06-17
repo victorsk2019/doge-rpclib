@@ -8,8 +8,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Base64;
-import java.util.List;
-import java.util.Map;
+
 
 /**
  *
@@ -31,8 +30,9 @@ public class RPCConnect
         
         try
         {
-            URL cURL = new URL("http", props.getRPCIP(), props.getRPCPort(), "");
             String RQ = getJSONContent(method, param);
+            
+            URL cURL = new URL("http", props.getRPCIP(), props.getRPCPort(), "");
             HttpURLConnection conn = (HttpURLConnection)cURL.openConnection();
             
             String authParams = props.getRPCUser() + ":" + props.getRPCPassword();
