@@ -6,7 +6,7 @@ Dogecoin RPC API connection library that uses HttpURLConnection to send and rece
 
 There are 3 java files:
 
-```rpclib
+``` rpclib
 ```  |
 ```  -----client
 ```  |	   |
