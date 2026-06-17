@@ -21,6 +21,5 @@ public class RPCClient
         RPCConnect conn = new RPCConnect();
         String response = conn.getResponse(this.props_, method, param);
         return response;
-    }
-    
+    }   
 }

@@ -30,10 +30,9 @@ public class RPCConnect
         
         try
         {
-            String RQ = getJSONContent(method, param);
-            
             URL cURL = new URL("http", props.getRPCIP(), props.getRPCPort(), "");
             HttpURLConnection conn = (HttpURLConnection)cURL.openConnection();
+            String RQ = getJSONContent(method, param);
             
             String authParams = props.getRPCUser() + ":" + props.getRPCPassword();
             conn.setRequestProperty("Authorization", "Basic " + new String(Base64.getEncoder().encode(authParams.getBytes())));
