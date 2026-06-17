@@ -1,4 +1,4 @@
-#doge-rpclib
+#doge-rpclib 
 
 Dogecoin RPC API connection library that uses HttpURLConnection to send and receive JSON content.  It is a NetBeans project and so is best to be used and compiled in that IDE using Apache ant.
 
@@ -6,17 +6,17 @@ Dogecoin RPC API connection library that uses HttpURLConnection to send and rece
 
 There are 3 java files:
 
-rpclib
-  |
-  -----client
-  |	|
-  |	RPCClient.java
-  |    
-  -----util
-	|
-	RPCConnect.java	
-	|
-	RPCProperties.java
+```rpclib
+```  |
+```  -----client
+```  |	   |
+```  |	   RPCClient.java
+```  |    
+```  -----util
+```	   |
+```	   RPCConnect.java	
+```	   |
+```	   RPCProperties.java
 
 RPCClient.java: This is a client-facing class whose instance is used to send and receive JSON-RPC responses.
 
