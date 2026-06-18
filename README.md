@@ -20,8 +20,8 @@ There are 3 java files:
            RPCProperties.java
 ```
 
-RPCClient.java: This is a client-facing class whose instance is used to send and receive JSON-RPC responses.
+**RPCClient.java**: This is a client-facing class whose instance is used to send and receive JSON-RPC responses.
 
-RPCConnect.java: This class is used for "heavy lifting" connection to the Dogecoin's blockchain RPC service, in JSON content with method name and a parameter.  Using UTF-8 character encoding it writes a request to an output stream and the JSON-formatted response string is returned from RPC method call.
+**RPCConnect.java**: This class is used for "heavy lifting" connection to the Dogecoin's blockchain RPC service, in JSON content with method name and a parameter.  Using UTF-8 character encoding it writes a request to an output stream and the JSON-formatted response string is returned from RPC method call.
 
-RPCProperties.java: This is a helper class to help encapsulate RPC connection information and provide accessor methods for a more laconic use. 
+**RPCProperties.java**: This is a helper class to help encapsulate RPC connection information and provide accessor methods for a more laconic use. 
